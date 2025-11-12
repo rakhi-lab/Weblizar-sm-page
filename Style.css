@@ -76,16 +76,19 @@
   color: #fff;
   background: transparent;
   border-width: 2px;
+
+  box-shadow:2px 2px 2px #545353
 }
 
 
 .custom-btn-outline.primary {
-  border-color: #0818ff;
-  color: #0818ff;
+  border-color: #115896e3;
+  color: #115896e3;
 }
 .custom-btn-outline.primary:hover {
-  background-color: #0818ff;
-  color: #fff;
+  background-color: #115896e3;
+  color: #ffffff;
+  box-shadow:4px 4px 8px #545353
 }
 
 .custom-btn-outline.success {
@@ -95,6 +98,7 @@
 .custom-btn-outline.success:hover {
   background-color: #207333;
   color: #fff;
+   box-shadow:4px 4px 8px #545353
 }
 
 .custom-btn-outline.info {
@@ -104,6 +108,7 @@
 .custom-btn-outline.info:hover {
   background-color: #128496;
   color: #fff;
+   box-shadow:4px 4px 8px #545353
 }
 
 /* price cards */
@@ -1007,7 +1012,7 @@
 
   .title-section {
     position: relative;
-    height: 300px; 
+    height: 400px; 
     background: url('./assets/teamwork-meeting-with-business-people.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -1034,20 +1039,39 @@
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
   }
+.title-content h1 {
+  font-size: 2.25rem;     
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
 
+.title-content p {
+  font-size: 1rem;         
+  color: #ddd;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Medium devices (tablets, etc) */
+@media (max-width: 992px) {
   .title-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 2rem;       
   }
-
   .title-content p {
-    font-size: 16px;
-    color: #ddd;
-    margin-bottom: 30px;
-    line-height: 1.5;
+    font-size: 0.9rem;     
   }
+}
+
+/* Small devices (mobiles) */
+@media (max-width: 576px) {
+  .title-content h1 {
+    font-size: 1.75rem;   
+  }
+  .title-content p {
+    font-size: 0.85rem;    
+  }
+}
 
  
 
