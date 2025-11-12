@@ -68,8 +68,8 @@
 
 /* GET BUNDLE Button */
 .custom-btn-outline {
-  padding: 0.6rem 1.3rem;
-  font-size: 1rem;
+  padding: 0.8rem 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
@@ -78,21 +78,13 @@
   border-width: 2px;
 }
 
-.custom-btn-outline.danger {
-  border-color: #ff5d2b;
-  color: #ff5d2b;
-}
-.custom-btn-outline.danger:hover {
-  background-color: #ff8c6a;
-  color: #fff;
-}
 
 .custom-btn-outline.primary {
-  border-color: #ffb908;
-  color: #ffb804;
+  border-color: #0818ff;
+  color: #0818ff;
 }
 .custom-btn-outline.primary:hover {
-  background-color: #ffb804;
+  background-color: #0818ff;
   color: #fff;
 }
 
@@ -106,11 +98,11 @@
 }
 
 .custom-btn-outline.info {
-  border-color: #18b7d0;
-  color: #18b7d0;
+  border-color: #128496;
+  color: #128496;
 }
 .custom-btn-outline.info:hover {
-  background-color: #18b7d0;
+  background-color: #128496;
   color: #fff;
 }
 
@@ -129,10 +121,10 @@
   }
 
   .pricing-card {
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   transition: all 0.3s ease;
     /* border-color: #ffc1078f; */
-    border-color: #28b9e0;
+    border-color: #28b8e03f;
     background-color: #f4e0abfe
 }
 .pricing-card:hover {
@@ -155,16 +147,16 @@
   .buy-btn {
     background-color:  #29873f !important; /* button white */
     color: #fff !important;         /* green text */
-    border: 2px solid #28a745 !important;
+    border: 2px solid #29873f !important;
     font-weight: 700;
     font-size: 0.95rem;                /* slightly larger */
     transition: all 0.3s ease-in-out;
   }
 
   .buy-btn:hover {
-    background-color: #e87909 !important; /* fill green */
-    color: #fff !important;               /* white text */
-    transform: scale(1.02);
+    background-color: #ffffff !important; /* fill green */
+    color: #28a745 !important;               /* white text */
+  
   }
 
   .best-value.highlight {
