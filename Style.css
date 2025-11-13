@@ -1473,6 +1473,35 @@ background-color: white;
   
 }
 
+.main-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+  margin: 2rem auto 1rem;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.15));
+}
+
+/* Gradient highlight text */
+.main-title .highlight {
+  color: #0078d7;
+  background: linear-gradient(90deg, #fa7fcf, #0066ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
 /* Inner section layout */
 .section-container {
   display: flex;
@@ -1552,6 +1581,54 @@ background-color: white;
   will-change: scale, filter;
 }
 
+.content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontal centering */
+  justify-content: center; /* vertical centering if parent has height */
+  text-align: center;
+  gap: 1rem; /* spacing between elements */
+  padding: 2rem 1rem;
+}
+
+/* Optional: Styling for the titles */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #272e2f;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.4;
+  max-width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #00a859;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #007a43;
+}
+
+
+.section-container .content-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #272e2f;
+  text-align: center;
+  font-weight: 700;
+}
+
 /* Right content box */
 .content-box {
   max-width: 480px;
@@ -1594,3 +1671,4 @@ background-color: white;
     max-width: 100%;
   }
 }
+

@@ -109,20 +109,6 @@
 </p>
 
 
-
-  <!-- <p class="mb-4" style="line-height: 1.8;">
-    School Management is a WordPress plugin to manage one or multiple schools and their entities such as classes, sections, students, exams, ID cards, admit cards, teachers, staff, fees, invoices, income, expense, noticeboard, study materials, staff/teacher can send homework SMS on student/parent mobile numbers and much more.
-  </p>
-
-  <p class="mb-4" style="line-height: 1.8; ">
-    Your school can take live classes of your students using Zoom. Create unlimited live sessions with our system. You can publish the result, admit cards, certificates publicly without any login; students can get the results using their details.
-  </p>
-  
-<p class="mb-4" style="line-height: 1.8; ">
-  School Management is a powerful WordPress plugin to manage one or multiple schools and their entities such as classes, sections, students, exams, ID cards, admit cards, teachers, staff, fees, invoices, income, expense, noticeboard, and study materials. Staff or teachers can send homework and SMS notifications to students’ or parents’ mobile numbers with ease.
-
-</p> -->
-
   <p class="mb-4" style="line-height: 1.8; ">
     <strong>Now eLearning Module:</strong> Upload subject-wise Video Classes (Recorded), Documents (PNG, JPG, PDF), or YouTube videos.
   </p>
@@ -137,19 +123,19 @@
     <i class="fas fa-book me-2"></i> Library & Labs
   </a>
 
-  <a href="#Facilitie-Operations" class="badge rounded-pill feature-badge" style="background: #ff8c6a; color: #fff;">
+  <a href="#Facilitie-Operations" class="badge rounded-pill feature-badge me-md-5" style="background: #ff8c6a; color: #fff;">
     <i class="fas fa-bus me-2"></i> Transport & Hostel
   </a>
 
-  <a href="#admin-staff" class="badge rounded-pill feature-badge" style="background: #28c76f; color: #fff;">
-    <i class="fas fa-chalkboard-teacher me-2"></i> Admin & Staff
+  <a href="#admin-staff" class="badge rounded-pill feature-badge ms-md-5" style="background: #28c76f; color: #fff;">
+    <i class="fas fa-chalkboard-teacher me-2"></i> Admin & Staff Portal
   </a>
 
-  <a href="#student-parent" class="badge rounded-pill feature-badge" style="background: #ffca3a; color: #000;">
+  <a href="#student-parent" class="badge rounded-pill feature-badge me-lg-5" style="background: #ffca3a; color: #000;">
     <i class="fas fa-user-graduate me-2"></i> Student & Parent Portal
   </a>
 
-  <a href="#mobile-app" class="badge rounded-pill feature-badge" style="background: #3816f7; color: #fff;">
+  <a href="#mobile-app" class="badge rounded-pill feature-badge ms-md-4" style="background: #3816f7; color: #fff;">
     <i class="fas fa-mobile-alt me-2"></i> Mobile App Integration
   </a>
 
@@ -165,27 +151,53 @@
 </a>
 </div>
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-.feature-badge {
-  text-decoration: none;
+  .feature-badge {
   padding: 0.55rem 1.2rem;
   font-size: 0.85rem;
   font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 50px;
+  /* colour/background: leave as inline style or existing */
 }
 
+/* Strong zig‑zag offsets */
+.badge-container .feature-badge:nth-child(8n+1) { transform: translateY(0px); }
+.badge-container .feature-badge:nth-child(8n+2) { transform: translateY(30px); }
+.badge-container .feature-badge:nth-child(8n+3) { transform: translateY(-20px); }
+.badge-container .feature-badge:nth-child(8n+4) { transform: translateY(35px); }
+.badge-container .feature-badge:nth-child(8n+5) { transform: translateY(-25px); }
+.badge-container .feature-badge:nth-child(8n+6) { transform: translateY(20px); }
+.badge-container .feature-badge:nth-child(8n+7) { transform: translateY(-15px); }
+.badge-container .feature-badge:nth-child(8n+8) { transform: translateY(25px); }
+
+/* Hover effect */
 .feature-badge:hover,
 .feature-badge:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  opacity: 0.9;
-  text-decoration: none;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  opacity: 0.95;
 }
+
+/* Responsive: disable large zig‑zag on narrow screens */
+@media (max-width: 768px) {
+  .badge-container .feature-badge {
+    width: 100%;
+    text-align: center;
+    transform: none !important;
+    margin-bottom: 10px;
+  }
+}
+
+
 </style>
+
+
+
 
 
 </div>
@@ -2407,10 +2419,28 @@ document.addEventListener("DOMContentLoaded", () => {
   </section>
 
   <!-- App Product -->
- <section class="app-section-container">
-    <div class="section-container">
-      <!-- Left Hex Grid -->
-      <div class="hex-grid">
+
+
+  <section class="app-section-container">
+
+<div class="content-center">
+<h2 class="main-title">
+  <span class="highlight">Our School Clients’</span> Management Apps
+</h2>
+
+  <p class="section-subtitle">
+    Manage your school efficiently with our all-in-one platform. Streamline student records, attendance, grades, timetables, notifications, fees, and more. Empower teachers, administrators, and parents with real-time insights and seamless communication.
+  </p>
+</div>
+
+
+
+  <div class="section-container"  style="display: flex; gap: 40px; position: relative;">
+
+    <!-- Left Hex Grid -->
+    <div class="content-box" style="flex: 1; padding-right: 20px;">
+      <h3>Android App</h3>
+     <div class="hex-grid">
   <div class="box">
   <a href="https://play.google.com/store/apps/details?id=com.iyceecastors" target="_blank">
     <img src="https://play-lh.googleusercontent.com/qS2F4O1ru-Ti41_I-XQDhXQ2JEs9ebeBAScLuJ6_md3clgJX9Xaq2JeFq6cmKGOolbmKBt5uaq-pOIKmruFxARY=w240-h480-rw" alt="Product 1">
@@ -2472,15 +2502,94 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
       </div>
+       
+      <div class="d-flex justify-content-center align-items-center m-5">
+        <a href="https://play.google.com/store/apps/developer?id=InTechno+Software+Private+Limited" class="btn btn-primary">View More Android Apps</a>
 
-      <!-- Right Content -->
+      </div>
+
+    </div>
+
+  <div style="width: 2px; background-color: #575757; margin: 0 10px;"></div>
+
+    <!-- Right Hex Grid -->
+    <div class="content-box" style="flex: 1; padding-left: 20px;">
+      <h3>iOS App</h3>
+       <!-- Right Content -->
      <div class="content-box">
-        <h2>School Management App</h2>
-        <p>Manage your school efficiently with our all-in-one platform. Streamline student records, attendance, grades, timetables, notifications, fees, and more. Empower teachers, administrators, and parents with real-time insights and seamless communication.</p>
-        <a href="https://play.google.com/store/apps/developer?id=InTechno+Software+Private+Limited" class="btn btn-primary">Get Started</a>
+
+        <div class="hex-grid">
+  <div class="box">
+  <a href="https://apps.apple.com/in/app/mamachamps-preschool/id6748066613" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/f2/b6/24f2b649-c66f-88a7-c5fb-3b69ed777530/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200ia-75.webp" alt="Product 1">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/apna-school/id6738719030" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4a/1b/0e/4a1b0e8a-7acc-2dd9-03dd-7a1f1ba9c0af/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/200x200ia-75.webp" alt="Product 2">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/sanskaar-sps/id6744100265" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/0b/d4/c00bd48a-3ca9-9e36-5187-13c45b80a82c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200ia-75.webp" alt="Product 3">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/ati-priye-kids/id6748935357" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f5/2d/41/f52d4100-7312-06b6-788f-1a27640c7f69/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200ia-75.webp" alt="Product 4">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://play.google.com/store/apps/details?id=com.perseveranceportal" target="_blank">
+    <img src="https://play-lh.googleusercontent.com/rDP2UpRijkyXSX9L2Icye3M2EF8npseI0N2bSbaNLn3jGUEyRw0X6J4lnUF-66IAOzWj_qBZs75H1ao1wS_WWQ=w240-h480-rw" alt="Product 5">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/accademia-leomilla/id6749367492" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d8/9d/a9/d89da9f7-7300-14e1-d54c-8de3c7e510a5/Placeholder.mill/200x200bb-75.webp" alt="Product 6">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/govardhan-skill-centre/id6740136219" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/6a/be/ab6abe60-917a-453e-316a-f717b3daa4e5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200ia-75.webp" alt="Product 7">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/saint-justice-school/id6745018937" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/d7/ff/20d7ff6e-cf09-97e7-3a28-f06462bf2189/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200ia-75.webp" alt="Product 8">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/mymeditech/id6746258203" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/38/d2/3b/38d23b44-a01a-b218-a184-15f8599922c2/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/200x200ia-75.webp" alt="Product 9">
+  </a>
+</div>
+
+<div class="box">
+  <a href="https://apps.apple.com/in/app/the-school-management/id6738578693" target="_blank">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/69/91/5d/69915dcd-0ff9-5d77-4799-d8586cf2f5db/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200ia-75.webp">
+  </a>
+</div>
+
+      </div>
+      </div>
+
+   <div class="d-flex justify-content-center align-items-center m-5">
+        <a href="https://play.google.com/store/apps/developer?id=InTechno+Software+Private+Limited" class="btn btn-primary">View More iOS Apps</a>
+
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   
 <!-- QR Code -->
