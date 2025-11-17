@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Valued School Clients</title>
 
-<!-- ✅ Bootstrap CSS -->
+<!-- ✅ Add AOS CSS in <head> -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -69,7 +72,7 @@
 .member-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.27);
-    border: 3px solid #be5cffc8;
+    border: 3px solid #d153ff;
 }
 
 /* ---------- Decorative Shape ---------- */
@@ -141,6 +144,201 @@
     font-size: 0.85rem;
   }
 }
+
+ /* ---------- PREMIUM Country Tabs ---------- */
+.country-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.country-tabs .tab-btn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+  color: #444;
+  transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+.country-tabs .tab-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* Active Tab Premium Gradient */
+.country-tabs .tab-btn.active {
+  background: linear-gradient(135deg, #5ea4ff, #b32eff);
+  color: white !important;
+
+  box-shadow: 0 10px 28px rgba(179, 46, 255, 0.5),
+              0 0 12px rgba(94, 164, 255, 0.6);
+  transform: translateY(-4px);
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .country-tabs .tab-btn {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+}
+
+/* ---------- SUPER PREMIUM ANIMATED TABS ---------- */
+.country-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Default Button Style */
+.country-tabs .tab-btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  /* Animation Base */
+  transform-style: preserve-3d;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  color: #333;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover 3D Flip */
+.country-tabs .tab-btn:hover {
+  transform: rotateX(18deg) rotateY(10deg) translateY(-6px);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Active Button – Modern Gradient + Bounce Animation */
+.country-tabs .tab-btn.active {
+  background: linear-gradient(135deg, #5ea4ff, #b32eff);
+  color: white !important;
+  box-shadow: 0 12px 35px rgba(137, 46, 255, 0.6);
+
+  animation: bounceTab 0.5s ease-out;
+}
+
+/* Bounce Animation */
+@keyframes bounceTab {
+  0%   { transform: scale(0.8); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Extra Modern Flip When Activated */
+.country-tabs .tab-btn.active {
+  transform: rotateX(10deg) rotateY(-10deg) translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .country-tabs .tab-btn {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================
+   🔥 GLOWING WAVE BEHIND TABS
+=============================================== */
+.tabs-glow {
+  position: absolute;
+  top: 240px; /* tabs ke just behind */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  height: 120px;
+  background: radial-gradient(
+      circle,
+      rgba(255,255,255,0.8),
+      rgba(94,164,255,0.7),
+      rgba(179,46,255,0.6),
+      transparent 70%
+  );
+  filter: blur(70px);
+  animation: glowWave 4s infinite ease-in-out alternate;
+  z-index: 0;
+}
+
+@keyframes glowWave {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+  100% { transform: translateX(-50%) scale(1.4); opacity: 1; }
+}
+
+
+/* ============================================
+   🔥 NEON ROTATING BORDER SHINE ON ACTIVE TAB
+=============================================== */
+.country-tabs .tab-btn.active {
+  position: relative;
+  overflow: hidden;
+}
+
+.country-tabs .tab-btn.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: conic-gradient(
+    #ffffff,
+    #5ea4ff,
+    #b32eff,
+    #ffffff
+  );
+  -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  animation: neonRotate 2s linear infinite;
+}
+
+@keyframes neonRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* ============================================
+   🔥 CARD 3D FLIP HOVER ANIMATION
+=============================================== */
+.member-box {
+  transform-style: preserve-3d;
+  perspective: 900px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.member-box:hover {
+  transform: rotateY(12deg) rotateX(6deg);
+}
+
 </style>
 </head>
 
@@ -155,7 +353,7 @@
     </div>
 
     <!-- ✅ Filter Section -->
-    <div class="filter-box">
+    <!-- <div class="filter-box">
       <div class="row align-items-center">
         <div class="col-md-6 mb-3 mb-md-0">
           <label for="countryFilter" class="form-label">Filter by Country:</label>
@@ -170,13 +368,39 @@
           <small class="text-muted">Showing schools based on selected country</small>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- ✅ Cards Grid -->
-    <div class="row g-4" id="schoolCards">
+<!--  Country Tabs -->
+<!-- <ul class="nav nav-pills justify-content-center mb-4" id="countryTabs">
+  <li class="nav-item">
+    <button class="nav-link active" data-country="all">All</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-country="India">India</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-country="Ghana">Ghana</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-country="Naigiria">Naigiria</button>
+  </li>
+</ul> -->
+
+
+
+<div class="country-tabs" id="countryTabs">
+  <button class="tab-btn active" data-country="all">All</button>
+  <button class="tab-btn" data-country="India">India</button>
+  <button class="tab-btn" data-country="Ghana">Ghana</button>
+  <button class="tab-btn" data-country="Naigiria">Naigiria</button>
+</div>
+
+
+    <!--  Cards Grid -->
+    <div class="row g-4" id="schoolCards" >
 
       <!-- Card 1 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India"  data-country="India" data-aos="flip-right"">
         <div class="card member-box text-center">
           <span class="shape"></span>
           <img src="https://play-lh.googleusercontent.com/d9NC9xOD_nXhL-xXbim9slpJq2Sy6HT4UCPp9o-Snb__GsgT9lUSBXqlIElFVN4deg=w240-h480-rw" class="card-img-top" alt="School Logo">
@@ -191,7 +415,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Naigiria">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Naigiria" data-aos="flip-right">
         <div class="card member-box text-center">
           <span class="shape"></span>
           <img src="https://play-lh.googleusercontent.com/qiw6FjG6oO6CK9XEKz5t2eoCMOw6Zva88v3d99nk4-9GVmVeAACIkex_JJfpDakh8fDq=w240-h480-rw" class="card-img-top" alt="School Logo">
@@ -206,7 +430,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Ghana">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Ghana" data-aos="flip-right" >
         <div class="card member-box text-center">
           <span class="shape"></span>
           <img src="https://play-lh.googleusercontent.com/kofhCUVsE9IJkh1WIcjBJrvnXyagVzVJLW5HpaJZUS7HU7d9XaRMS8SOELupluA_xKSj=w240-h480-rw" class="card-img-top" alt="School Logo">
@@ -221,7 +445,125 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India" data-aos="flip-right">
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/W03awut0QsKXtJ44q8wtkPOXf4hndiv_5Lu_0zfY8GZ7zeaAQkzQ5VkKkIgoPPYKL6c22jU9sLJufg7RecJADBE=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.horizoninternationalschool.com" target="_blank" class="school-link">Nandini Public School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Rahul Desai</strong></p>
+            <p class="member-designation mb-0">Country: <strong>India</strong></p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 1 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India"  data-country="India" data-aos="flip-right"">
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/d9NC9xOD_nXhL-xXbim9slpJq2Sy6HT4UCPp9o-Snb__GsgT9lUSBXqlIElFVN4deg=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.sunshineacademy.edu.in" target="_blank" class="school-link">Under The Tree School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Priya Mehta</strong></p>
+            <p class="member-designation mb-0">Country: <strong>India</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Naigiria" data-aos="flip-right">
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/qiw6FjG6oO6CK9XEKz5t2eoCMOw6Zva88v3d99nk4-9GVmVeAACIkex_JJfpDakh8fDq=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.greenoakschool.in" target="_blank" class="school-link">Green Oak Public School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Arjun Verma</strong></p>
+            <p class="member-designation mb-0">Country: <strong>Naigiria</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Ghana" data-aos="flip-right" >
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/kofhCUVsE9IJkh1WIcjBJrvnXyagVzVJLW5HpaJZUS7HU7d9XaRMS8SOELupluA_xKSj=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.stmaryshigh.edu.in" target="_blank" class="school-link">Deeksha Model School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Anita Sharma</strong></p>
+            <p class="member-designation mb-0">Country: <strong>Ghana</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India" data-aos="flip-right">
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/W03awut0QsKXtJ44q8wtkPOXf4hndiv_5Lu_0zfY8GZ7zeaAQkzQ5VkKkIgoPPYKL6c22jU9sLJufg7RecJADBE=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.horizoninternationalschool.com" target="_blank" class="school-link">Nandini Public School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Rahul Desai</strong></p>
+            <p class="member-designation mb-0">Country: <strong>India</strong></p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 1 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India"  data-country="India" data-aos="flip-right"">
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/d9NC9xOD_nXhL-xXbim9slpJq2Sy6HT4UCPp9o-Snb__GsgT9lUSBXqlIElFVN4deg=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.sunshineacademy.edu.in" target="_blank" class="school-link">Under The Tree School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Priya Mehta</strong></p>
+            <p class="member-designation mb-0">Country: <strong>India</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Naigiria" data-aos="flip-right">
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/qiw6FjG6oO6CK9XEKz5t2eoCMOw6Zva88v3d99nk4-9GVmVeAACIkex_JJfpDakh8fDq=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.greenoakschool.in" target="_blank" class="school-link">Green Oak Public School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Arjun Verma</strong></p>
+            <p class="member-designation mb-0">Country: <strong>Naigiria</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="Ghana" data-aos="flip-right" >
+        <div class="card member-box text-center">
+          <span class="shape"></span>
+          <img src="https://play-lh.googleusercontent.com/kofhCUVsE9IJkh1WIcjBJrvnXyagVzVJLW5HpaJZUS7HU7d9XaRMS8SOELupluA_xKSj=w240-h480-rw" class="card-img-top" alt="School Logo">
+          <div class="card-body">
+            <h5 class="member-title mb-2">
+              <a href="https://www.stmaryshigh.edu.in" target="_blank" class="school-link">Deeksha Model School</a>
+            </h5>
+            <p class="member-designation mb-0">Client: <strong>Anita Sharma</strong></p>
+            <p class="member-designation mb-0">Country: <strong>Ghana</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 school-card" data-country="India" data-aos="flip-right">
         <div class="card member-box text-center">
           <span class="shape"></span>
           <img src="https://play-lh.googleusercontent.com/W03awut0QsKXtJ44q8wtkPOXf4hndiv_5Lu_0zfY8GZ7zeaAQkzQ5VkKkIgoPPYKL6c22jU9sLJufg7RecJADBE=w240-h480-rw" class="card-img-top" alt="School Logo">
@@ -243,7 +585,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- ✅ Filter Script -->
-<script>
+<!-- <script>
 document.getElementById('countryFilter').addEventListener('change', function() {
   const selected = this.value;
   const cards = document.querySelectorAll('.school-card');
@@ -258,6 +600,44 @@ document.getElementById('countryFilter').addEventListener('change', function() {
     }
   });
 });
+
+</script> -->
+
+
+<script>
+document.querySelectorAll("#countryTabs .tab-btn").forEach(tab => {
+    tab.addEventListener("click", function () {
+
+        document.querySelectorAll("#countryTabs .tab-btn")
+            .forEach(btn => btn.classList.remove("active"));
+
+        this.classList.add("active");
+
+        const selected = this.dataset.country;
+        const cards = document.querySelectorAll('.school-card');
+
+        cards.forEach(card => {
+            if (selected === "all" || card.dataset.country === selected) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
 </script>
+
+<!-- ✅ AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000, 
+    easing: 'ease-in-out', 
+    once: false, 
+    mirror: false 
+  });
+</script>
+
+
 </body>
 </html>
